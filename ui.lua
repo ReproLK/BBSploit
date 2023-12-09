@@ -2019,5 +2019,7 @@ function library:AddWindow(title, options)
 		end
 	end
 
+	return library
+
 	return window_data, Window
 end
