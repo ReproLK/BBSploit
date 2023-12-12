@@ -1852,9 +1852,9 @@ function library:AddWindow(title, options)
 
 									sf.CanvasSize = UDim2.new(0, 0, lin * 0.153846154, 0)
 								end
+							end
 
 							local highlight_logs = function(type)
-							end
 								if type == "Text" then
 									Source.Text = Source.Text:gsub("\13", "")
 									Source.Text = Source.Text:gsub("\t", "      ")
@@ -1876,7 +1876,6 @@ function library:AddWindow(title, options)
 								Source.Changed:Connect(highlight_lua)
 							elseif console_options.source == "Logs" then
 								Lines.Visible = false
-
 								highlight_logs("Text")
 								Source.Changed:Connect(highlight_logs)
 							end
